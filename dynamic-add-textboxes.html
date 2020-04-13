@@ -1,0 +1,36 @@
+<html>
+<head>
+
+<script language="javascript">
+function add(type) {
+
+	var element = document.createElement("input");
+
+	element.setAttribute("type", type);
+	element.setAttribute("value", type);
+	element.setAttribute("name", type);
+
+
+	var my = document.getElementById("addelement");
+
+	my.appendChild(element);
+
+}
+</script>
+</head>
+<body>
+<form>
+Click on ADD button to add textbox or new button.
+<BR/>
+<select name="element">
+	<OPTION value="button" placeholder="Button">Button</OPTION>
+	<OPTION value="text" placeholder="Text">Textbox</OPTION>
+</select>
+
+<input type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+
+<span id="addelement"><br></span>
+
+</form>
+</body>
+</html>
